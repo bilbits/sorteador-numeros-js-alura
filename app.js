@@ -3,7 +3,4 @@ function sortear () {
 let doNumero = document.getElementById('de').value;
 let ateNumero = document.getElementById('ate').value;
 
-alert(`Quantidade de números: ${quantidade}`);
-alert(`Do número: ${doNumero}`);
-alert(`Até o número: ${ateNumero}`);
-}
+}  
