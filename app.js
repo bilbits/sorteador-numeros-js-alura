@@ -2,6 +2,11 @@ function sortear () {
     let quantidade =parseInt(document.getElementById('quantidade').value);
 let doNumero = parseInt(document.getElementById('de').value);
 let ateNumero = parseInt(document.getElementById('ate').value);
+if (doNumero >= ateNumero) {
+    alert('Campo "Do número" deve ser inferior ao campo "Até o número". Verifique!');
+    return;
+  }
+
 let sorteados = [];
 let numero;
 for (let i = 0; i < quantidade; i++) {
