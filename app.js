@@ -20,24 +20,26 @@ sorteados.push(numero);
 } 
 let exibirSorteados = document.getElementById('resultado');
 exibirSorteados.innerHTML = `<label class ="texto__paragrafo"> Números sorteados até agora: ${sorteados}</label>`;
-alterarStatusBotao();
+alterarStatusBotao(true);
 }  
 
 function obterNumeroAleatorio(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  
-}
-function alterarStatusBotao() {
-    let alterar = document.getElementById('btn-reiniciar');
-    if (alterar.classList.contains('container__botao-desabilitado')) {
-        alterar.classList.remove('container__botao-desabilitado');
-        alterar.classList.add('container__botao');
+ function alterarStatusBotao(abilitar) {
+    let alterarStatusBotao = document.getElementById('btn-reiniciar');
+    if (abilitar) {
+        alterarStatusBotao.disabled = false;
+        alterarStatusBotao.classList.remove('container__botao-desabilitado');
+        alterarStatusBotao.classList.add('container__botao');
     } else {
-alterar.classList.remove('container__botao');
-alterar.classList.add('container__botao-desabilitado');
+        alterarStatusBotao.disabled = true;
+        alterarStatusBotao.classList.remove('container__botao');
+        alterarStatusBotao.classList.add('container__botao-desabilitado');
     }
+ }
+    
 }
 function reiniciar() {
 
