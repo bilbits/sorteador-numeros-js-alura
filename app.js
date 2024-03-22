@@ -42,7 +42,7 @@ function alterarStatusBotao(sorteados) {
   let botaoReiniciar = document.getElementById('btn-reiniciar');
   let botaoSortear = document.getElementById('btn-sortear');
 
-  if (sorteados.length > 0) {
+  if (sorteados) {
     botaoReiniciar.disabled = false;
     botaoSortear.disabled = true;
     botaoReiniciar.classList.remove('container__botao-desabilitado');
